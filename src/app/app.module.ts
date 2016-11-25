@@ -6,10 +6,12 @@ import {DndModule} from 'ng2-dnd';
 
 
 import { AppComponent } from './app.component';
+import { ColomComponent } from './colom/colom.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColomComponent
   ],
   imports: [
     BrowserModule,
