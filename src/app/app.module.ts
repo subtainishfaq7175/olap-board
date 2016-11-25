@@ -7,11 +7,13 @@ import {DndModule} from 'ng2-dnd';
 
 import { AppComponent } from './app.component';
 import { ColomComponent } from './colom/colom.component';
+import { ItemComponent } from './colom/item/item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColomComponent
+    ColomComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

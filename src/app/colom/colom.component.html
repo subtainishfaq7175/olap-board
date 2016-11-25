@@ -4,7 +4,10 @@
   </div>
   <div class="panel-body" dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="colomValues">
     <ul class="list-group" >
-      <li *ngFor="let item of colomValues; let i = index;" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+<!--
+     < <li  class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+-->
+      <app-item *ngFor="let item of colomValues; let i = index;" [listItem]="item"[listItemIndex]="i" ></app-item>
     </ul>
   </div>
 </div>
