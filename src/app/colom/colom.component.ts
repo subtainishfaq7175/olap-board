@@ -4,7 +4,6 @@ import { ItemComponent } from './item';
 @Component({
   selector: 'app-colom',
   templateUrl: './colom.component.html',
-  directive :[ItemComponent]
 })
 export class ColomComponent implements OnInit {
   @Input() colomValues:Array<string> = [];

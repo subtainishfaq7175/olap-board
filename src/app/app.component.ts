@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { RowComponent } from './row';
+import {StoriesService} from "./rest-client/stories.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  direvtives : [RowComponent]
+  providers:[StoriesService]
 })
 export class AppComponent
 {
+  constructor(private stories : StoriesService){}
 
-
+getRequest()
+{
+  this.stories.getStories().subscribe();
+}
 }
