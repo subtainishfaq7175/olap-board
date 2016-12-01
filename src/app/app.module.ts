@@ -6,23 +6,19 @@ import {DndModule} from 'ng2-dnd';
 
 
 import { AppComponent } from './app.component';
-import { ColomComponent } from './colom/colom.component';
-import { ItemComponent } from './colom/item/item.component';
-import { RowComponent } from './row/row.component';
 import { ConstantsService } from './common/contants.service';
-import { StoryComponent } from './story/story.component';
-import { TaskComponent } from './story/task/task.component';
-import { CategoryComponent } from './story/category/category.component';
+import { StoryComponent } from './story-board/story/story.component';
+import { TaskComponent } from './story-board/story/task/task.component';
+import { CategoryComponent } from './story-board/story/category/category.component';
+import { StoryBoardComponent } from './story-board/story-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColomComponent,
-    ItemComponent,
-    RowComponent,
     StoryComponent,
     TaskComponent,
-    CategoryComponent
+    CategoryComponent,
+    StoryBoardComponent
   ],
   imports: [
     BrowserModule,
