@@ -6,13 +6,18 @@
     <div class="col-sm-6" >
       <div class="row">
         <div class="col-sm-6">
+          <!--add you categories and task as row here , to create sub category-->
           Front-end
         </div>
         <div class="col-sm-6">
           <div class="row">
             CSS
+            <!--add you categories and task as row here , to create sub category-->
+
           </div>
           <div class="row">
+            <!--add you categories and task as row here , to create sub category-->
+
             javascript
           </div>
         </div>
@@ -28,18 +33,17 @@
   <div class="row">
     <div class="col-sm-3">
 
-      <app-category [colomValues]="listBoxers"></app-category>
+      <app-category [colomValues]="listBoxers">
+      </app-category>
     </div>
     <div class="col-sm-3">
-      <app-category [colomValues]="listTeamOne"></app-category>
-    </div>
-    <div class="col-sm-3">
-      <app-category [colomValues]="listTeamTwo"></app-category>
-    </div>
-    <div class="col-sm-3">
-      <app-category [colomValues]="listTeamTwo"></app-category>
-    </div>
+      <app-category [colomValues]="listTeamOne">
 
+      </app-category>
+    </div>
+    <div class="col-sm-3">
+      <app-category [colomValues]="listTeamTwo"></app-category>
+    </div>
   </div>
 
 

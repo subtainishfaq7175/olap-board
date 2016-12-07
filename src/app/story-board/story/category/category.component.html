@@ -2,13 +2,26 @@
   <div class="panel-heading">
     Backlog
   </div>
-  <div class="panel-body" dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="colomValues">
+  <div class="panel-body"  [dropZones]="['boxers-zone']" dnd-droppable   (onDropSuccess)="transferDataSuccess($event)">
     <ul class="list-group" >
 
+      <li   *ngFor="let item of colomValues; let i = index;" class="list-group-item" [dropZones]="['boxers-zone']"   [dragData]="item" dnd-draggable (onDragStart)="dragStarted($event)" [dragEnabled]="true" >{{item}}</li>
+<!--
+ <div class="panel-body" dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="colomValues">
+    <ul class="list-group" >
+
+      <li   *ngFor="let item of colomValues; let i = index;" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+-->
+
       <!--
-            <app-item *ngFor="let item of colomValues; let i = index;" [listItem]="item"[listItemIndex]="i" ></app-item>
+            <ng-content></ng-content>
+      -->
+
+      <!--
+            <app-item ></app-item>
       -->
     </ul>
 
   </div>
+
 </div>
