@@ -1,6 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
-.vertical{
-  text-:rotate(90deg);
 
+html {
+  max-width: 1600px;
+  display: table;
+  margin: auto;
 }
+body
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+.appbox
+{
+ width: 280px
+}
+.question
+{
+  align-content: center;
+}
+td
+{
+  width: 10%;
+  table-layout:fixed;
+}
+

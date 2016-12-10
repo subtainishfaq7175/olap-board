@@ -1,0 +1,34 @@
+
+<h4 style=" text-align: center">{{questionContent.title}}</h4>
+
+    <div class="container" >
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Neznám</th>
+          <th>Rád se naučím</th>
+          <th>Jsem junior</th>
+          <th>Jsem senior</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor=" let item of questionContent.rows;  let i = index">
+          <td>{{item.title}}</td>
+          <td><input type="radio" [(ngModel)]="item.answere"  name="{{ 'level'+i}}" value="{{item.beginner}}">
+          </td>
+          <td><input type="radio" [(ngModel)]="item.answere"  name="{{ 'level'+i}}" value="{{item.immature}}">
+          </td>
+          <td><input type="radio" [(ngModel)]="item.answere"  name="{{ 'level'+i}}" value="{{item.mature}}">
+          </td>
+          <td><input type="radio" [(ngModel)]="item.answere"  name="{{ 'level'+i}}" value="{{item.professional}}">
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+

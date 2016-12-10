@@ -1,0 +1,51 @@
+
+<h4 style=" text-align: center">{{questionContent.title}}</h4>
+<div class="row">
+  <div class="col-sm-3  appbox"  >
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        {{questionContent.subtitle}}
+      </div>
+      <div class="panel-body" dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="questionContent.options">
+        <ul class="list-group" >
+          <li *ngFor="let item of questionContent.options; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3 appbox">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        Rád se naučím
+      </div>
+      <div class="panel-body" dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="questionContent.beginer">
+        <ul class="list-group" >
+          <li *ngFor=" let item of questionContent.beginer;  let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3 appbox">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        Jsem junior
+      </div>
+      <div class="panel-body" dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="questionContent.intermediat">
+        <ul class="list-group">
+          <li *ngFor="let item of questionContent.intermediat;  let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+        </ul>
+      </div>
+    </div>
+  </div><div class="col-sm-3 appbox">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        Jsem senior
+      </div>
+      <div class="panel-body" dnd-sortable-container [dropZones]="['boxers-zone']" [sortableData]="questionContent.expert">
+        <ul class="list-group">
+          <li *ngFor="let item of questionContent.expert;  let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

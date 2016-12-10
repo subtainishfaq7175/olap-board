@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RowComponent } from './row';
 import {StoriesService} from "./rest-client/stories.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers:[StoriesService]
+  providers:[StoriesService],
+
 })
 export class AppComponent
 {
