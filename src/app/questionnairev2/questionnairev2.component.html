@@ -1,13 +1,18 @@
 <div >
   <div class="container" >
-  <button  class="btn btn-primary btn-arrow-left" *ngIf="currentQuestion>0" (click)="prevQuestion()">Previous</button>
-  <button  class="btn btn-success btn-arrow-right" style="float: right" (click)="nextQuestion()">  Next  </button>
+  <button  class="btn btn-primary btn-arrow-left" *ngIf="page>1" (click)="prevQuestion()">Previous</button>
+  <button  class="btn btn-success btn-arrow-right" style="float: right" *ngIf="page<5" (click)="nextQuestion()">  Next  </button>
   </div>
 <div class="container">
-    <app-questionv2 class="question" [questionContent]="question1" *ngIf="currentQuestion % 5==0" ></app-questionv2>
-    <app-questionv2 class="question" [questionContent]="question2" *ngIf="currentQuestion % 5==1"></app-questionv2>
-    <app-questionv2 class="question" [questionContent]="question3"*ngIf="currentQuestion % 5==2"></app-questionv2>
-    <app-questionv2 class="question" [questionContent]="question4" *ngIf="currentQuestion % 5==3"></app-questionv2>
-    <app-questionv2 class="question" [questionContent]="question5" *ngIf="currentQuestion % 5==4"></app-questionv2>
+    <app-questionv2 class="question" [questionContent]="question1" *ngIf="page==1" ></app-questionv2>
+    <app-questionv2 class="question" [questionContent]="question2" *ngIf="page==2"></app-questionv2>
+    <app-questionv2 class="question" [questionContent]="question3"*ngIf="page==3"></app-questionv2>
+    <app-questionv2 class="question" [questionContent]="question4" *ngIf="page==4"></app-questionv2>
+    <app-questionv2 class="question" [questionContent]="question5" *ngIf="page==5"></app-questionv2>
+    <ngb-progressbar type="success" [value]="progress"></ngb-progressbar>
+
 </div>
+  <div class="container">
+    <ngb-pagination [collectionSize]="50" class="pagination" [(page)]="page" (pageChange)="pageClicked($event)"></ngb-pagination>
+  </div>
 </div>

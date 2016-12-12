@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+html, body {
+  height: 100%;
+}
 
 html {
   max-width: 1600px;
@@ -24,4 +27,66 @@ td
   width: 10%;
   table-layout:fixed;
 }
+/*.pagination
+{
+  position: absolute;
+  !* top: 50%; *!
+  left: 50%;
+  transform: translate(-50%, 0%);
+}*/
+
+.btn-xl {
+  width: 200px !important;
+  height: 200px !important;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+
+}
+.rotate:hover
+{
+
+  background: #2f487b;
+  transition-duration: 0.7s;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transform:rotate(0deg);
+  -moz-transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+  transform:rotate(0deg);
+
+
+}
+
+.lang{margin-top: 70px}
+.lang:hover
+{
+
+  background: #2f487b;
+  transition-duration: 0.7s;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transform:rotate(0deg);
+  -moz-transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+  transform:rotate(0deg);
+  margin-top: 30px
+
+}
+
+
+.heading{text-align: center}
+
 

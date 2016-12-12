@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import {HttpModule, Http} from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import {DndModule} from 'ng2-dnd';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +18,11 @@ import { QuestionnaireComponent } from './questionnaire/questionnaire.component'
 import { QuestionComponent } from './questionnaire/question/question.component';
 import { Questionnairev2Component } from './questionnairev2/questionnairev2.component';
 import { Questionv2Component } from './questionnairev2/questionv2/questionv2.component';
+import { Questionnairev3Component } from './questionnairev3/questionnairev3.component';
+import { Questionv3Component } from './questionnairev3/questionv3/questionv3.component';
+import {routing} from "./app.route";
+import { Questionv3q2Component } from './questionnairev3/questionv3q2/questionv3q2.component';
+
 
 @NgModule({
   declarations: [
@@ -27,14 +34,19 @@ import { Questionv2Component } from './questionnairev2/questionv2/questionv2.com
     QuestionnaireComponent,
     QuestionComponent,
     Questionnairev2Component,
-    Questionv2Component
+    Questionv2Component,
+    Questionnairev3Component,
+    Questionv3Component,
+    Questionv3q2Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
     MaterialModule.forRoot(),
-    DndModule.forRoot()
+    DndModule.forRoot(),
+    NgbModule.forRoot()
 
   ],
   providers: [ConstantsService],
